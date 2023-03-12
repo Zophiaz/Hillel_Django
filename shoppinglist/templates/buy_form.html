@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Buy item</title>
+</head>
+<body>
+<br>
+<h1>Add details about the bought item:</h1>
+<form action="/shopping_list/{{ item.item_id.id }}/buy" method="post">
+    {% csrf_token %}
+    <label >Purchase date:</label>
+    <input type="date" placeholder ="buy_date">
+    <label >Price:</label>
+    <input type="number" value="1.00" placeholder = "price">
+    <input type="submit">
+
+
+<h1>List of bought items:</h1>
+    {% for item in shopping_list_data %}
+        <p> {{ item.item_id.name }} {{ item.quantity }} {{item.item_id.shop_id.name}} {{item.buy_date}} {{item.price}}
+</form>
+
+</body>
+</html>

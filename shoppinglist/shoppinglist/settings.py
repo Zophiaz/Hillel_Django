@@ -56,7 +56,7 @@ ROOT_URLCONF = 'shoppinglist.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/PycharmProjects/DJ_project/shoppinglist/templates'],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
