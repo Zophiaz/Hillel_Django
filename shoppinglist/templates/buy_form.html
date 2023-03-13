@@ -11,11 +11,13 @@
     {% csrf_token %}
     <label >Purchase date:</label>
     <input type="date" placeholder ="buy_date">
+<br>
+<br>
     <label >Price:</label>
     <input type="number" value="1.00" placeholder = "price">
     <input type="submit">
-
-
+<br>
+<br>
 <h1>List of bought items:</h1>
     {% for item in shopping_list_data %}
         <p> {{ item.item_id.name }} {{ item.quantity }} {{item.item_id.shop_id.name}} {{item.buy_date}} {{item.price}}

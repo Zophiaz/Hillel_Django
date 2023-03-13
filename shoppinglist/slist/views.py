@@ -25,18 +25,19 @@ def index(request):
 #.filter(list_id=user_list.list_id)
 
 
-def add_item(request):
-    return render(request, "add_form.html")
+def add_item(item_id):
+
+    return render(item_id, "add_form.html")
 
 
-def buy_item(request, id):
+def buy_item(request, id, item_id):
     user_list = UserToList.objects.filter(user_id=1).first()
-    item = buy_item(index(request.POST.get('item')))
-    amount = buy_item(index(request.POST.get('amount')))
-    shop = buy_item(index(request.POST.get('shop')))
-    shop_obj = MallList.objects.filter(pk=int(shop)).first()
-    item_obj = Item(name=item, shop_id=shop_obj)
-    db_raw = ShoppingList.objects.filter(list_id=user_list.list_id, item_id=item_obj, quantity=amount).\
+    bought_item = index(request.POST.get('item'))
+    bought_amount = index(request.POST.get('amount'))
+    bought_shop = index(request.POST.get('shop'))
+    shop_obj = MallList.objects.filter(pk=int(bought_shop)).first()
+    item_obj = Item(name=bought_item, shop_id=shop_obj)
+    db_raw = ShoppingList.objects.filter(list_id=user_list.list_id, item_id=item_obj, quantity=bought_amount).\
         exclude(buy_date__isnull=False).first()
     if db_raw:
         if request.method == "POST":
@@ -44,7 +45,7 @@ def buy_item(request, id):
             item.delete()
             buy_date = request.POST.get("buy_date")
             price = request.POST.get("price")
-            bought_item = ShoppingList(list_id=user_list.list_id, item_id=item_obj, quantity=amount,
+            bought_item = ShoppingList(list_id=user_list.list_id, item_id=item_obj, quantity=bought_amount,
                                        price=price, buy_date=buy_date)
             bought_item.save()
 
