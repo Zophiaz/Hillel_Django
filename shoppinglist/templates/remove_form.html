@@ -2,11 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Remove item</title>
-</head>
-<body>
+    <title>Added</title>
+
+    <style>
+      #navbar {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        width: 130px;
+      }
+      #navbar li {
+        border-left: 10px solid #666;
+        border-bottom: 1px solid #666;
+      }
+      #navbar a {
+        background-color: #949494;
+        color: #fff;
+        padding: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        border-left: 5px solid #33ADFF;
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <ul id="navbar">
+      <li><a href="/shopping_list/">My list</a></li>
+      <li><a href="/shopping_list/add">Add item</a></li>
+      <li><a href="/shopping_list/buy">Buy item</a></li>
+      <li><a href="/shopping_list/remove">Remove item</a></li>
+
+</ul>
 <br>
-<h1>The item was removed/h1>
+<br>
+<br>
+<br>
+<h1> Remove item:</h1>
+<form action="/shopping_list/remove" method="post">
+    {% csrf_token %}
+    {% for item in shopping_list_data %}
+        <p> {{ item.item_id.name }} {{ item.quantity }} {{item.item_id.shop_id.name}}
+        <input type="submit" value="Remove">
+
+{% endfor %}
+</form>
+
 
 </body>
 </html>

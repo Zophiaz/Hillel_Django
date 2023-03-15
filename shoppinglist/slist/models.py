@@ -12,6 +12,7 @@ class ShoppingList(models.Model):
     buy_date = models.DateField(null=True)
 
 
+
 class UserToList(models.Model):
     user_id = models.IntegerField()
     list_id = models.UUIDField()

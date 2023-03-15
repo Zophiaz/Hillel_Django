@@ -3,38 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <title>Shopping List</title>
-</head>
-<body>
-
-<h1> Add item:</h1>
-<form action="/shopping_list/" method="post">
-    {% csrf_token %}
-    <input type="text" name="item" placeholder="Item">
-    <input type="number" name="amount" placeholder="Amount">
-    <select name="shop">
-        {% for shop in shops %}
-        <option value ="{{ shop.id }}">{{ shop.name }}</option>
-    {% endfor %}
-    </select>
-    <input type="submit" value="Add">
 
 
+    <style>
+      #navbar {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        width: 130px;
+      }
+      #navbar li {
+        border-left: 10px solid #666;
+        border-bottom: 1px solid #666;
+      }
+      #navbar a {
+        background-color: #949494;
+        color: #fff;
+        padding: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        border-left: 5px solid #33ADFF;
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <ul id="navbar">
+      <li><a href="/shopping_list/">My list</a></li>
+      <li><a href="/shopping_list/add">Add item</a></li>
+      <li><a href="/shopping_list/buy">Buy item</a></li>
+      <li><a href="/shopping_list/remove">Remove item</a></li>
+    </ul>
+
+<br>
+<br>
+<br>
 <br>
 <h1>List of items:</h1>
     {% for item in shopping_list_data %}
         <p> {{ item.item_id.name }} {{ item.quantity }} {{item.item_id.shop_id.name}}
-            <a href="/shopping_list/add" target="_blank" > <input type="button" value="Add to my list"></a>
-
-            <a href="/shopping_list/{{ item.item_id.id }}/buy" target="_blank" > <input type="button" value="Buy"></a>
-                <form method="post" action="/shopping_list/{{ item.item_id.id }}/buy">
-
-            <form method="post" action="/shopping_list/{{ item.item_id.id }}/remove">
-                <input type="submit" value="Remove">
+            <br>
 
 
 {% endfor %}
 
 
-</form>
 </body>
 </html>

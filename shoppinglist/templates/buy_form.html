@@ -3,24 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <title>Buy item</title>
-</head>
-<body>
+
+    <style>
+      #navbar {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        width: 130px;
+      }
+      #navbar li {
+        border-left: 10px solid #666;
+        border-bottom: 1px solid #666;
+      }
+      #navbar a {
+        background-color: #949494;
+        color: #fff;
+        padding: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        border-left: 5px solid #33ADFF;
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <ul id="navbar">
+      <li><a href="/shopping_list/">My list</a></li>
+      <li><a href="/shopping_list/add">Add item</a></li>
+      <li><a href="/shopping_list/buy">Buy item</a></li>
+      <li><a href="/shopping_list/remove">Remove item</a></li>
+
+</ul>
 <br>
-<h1>Add details about the bought item:</h1>
-<form action="/shopping_list/{{ item.item_id.id }}/buy" method="post">
+<br>
+<br>
+<br>
+
+
+<h1>Buy item by adding details about the purchase:</h1>
+<form action="/shopping_list/buy" method="post">
     {% csrf_token %}
-    <label >Purchase date:</label>
-    <input type="date" placeholder ="buy_date">
-<br>
-<br>
-    <label >Price:</label>
-    <input type="number" value="1.00" placeholder = "price">
-    <input type="submit">
-<br>
-<br>
-<h1>List of bought items:</h1>
     {% for item in shopping_list_data %}
-        <p> {{ item.item_id.name }} {{ item.quantity }} {{item.item_id.shop_id.name}} {{item.buy_date}} {{item.price}}
+        <p> Item: {{ item.item_id.name }} <br> Amount: {{ item.quantity }} <br> Shop: {{item.item_id.shop_id.name}}<br>
+    <label >Purchase date:</label>
+    <input type="date" placeholder ="buy_date"> <br>
+
+    <label >Price:</label>
+    <input type="number" value="1.00" placeholder = "price"> <br>
+    <input type="submit">
+    <br> <br>
+
+{% endfor %}
+<br>
+<br>
+
 </form>
 
 </body>
