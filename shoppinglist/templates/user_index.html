@@ -2,9 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Shopping List</title>
-
-
+    <title>Register</title>
     <style>
       #navbar {
         margin: 0;
@@ -32,24 +30,15 @@
 
     <ul id="navbar">
       <li><a href="http://127.0.0.1:8000/user/">Home</a></li>
-      <li><a href="/shopping_list/">My list</a></li>
-      <li><a href="/shopping_list/add">Add item</a></li>
-      <li><a href="/shopping_list/buy">Buy item</a></li>
-      <li><a href="/shopping_list/remove">Remove item</a></li>
+      <li><a href="http://127.0.0.1:8000/user/register/">Register</a></li>
+      <li><a href="http://127.0.0.1:8000/user/login/">Log in</a></li>
+      <li><a href="http://127.0.0.1:8000/user/logout/">Log out</a></li>
+      <li><a href="http://127.0.0.1:8000/shopping_list/">Shopping list</a></li>
     </ul>
 
 <br>
 <br>
 <br>
-<br>
-<h1>List of items:</h1>
-    {% for item in shopping_list_data %}
-        <p> {{ item.item_id.name }} {{ item.quantity }} {{item.item_id.shop_id.name}}
-            <br>
-
-
-{% endfor %}
-
-
+<h1> Homepage</h1>
 </body>
 </html>

@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.views import defaults
 import django.views.defaults
@@ -7,6 +7,8 @@ from .models import ShoppingList, UserToList, MallList, Item
 
 
 def index(request):
+    if not request.user.is_authenticated:
+        return redirect('http://127.0.0.1:8000/user/login/')
     user_list = UserToList.objects.filter(user_id=1).first()
 
     #new_result = [itm.__dict__ for itm in result]
@@ -27,6 +29,8 @@ def index(request):
 
 
 def add_item(request):
+    if not request.user.is_authenticated:
+        return redirect('http://127.0.0.1:8000/user/login/')
     user_list = UserToList.objects.filter(user_id=1).first()
 
     if request.method == "POST":
@@ -46,6 +50,8 @@ def add_item(request):
 
 
 def buy_item(request):
+    if not request.user.is_authenticated:
+        return redirect('http://127.0.0.1:8000/user/login/')
     user_list = UserToList.objects.filter(user_id=1).first()
 
     #for raw in db_raw:
@@ -63,6 +69,8 @@ def buy_item(request):
 
 
 def remove_item(request):
+    if not request.user.is_authenticated:
+        return redirect('http://127.0.0.1:8000/user/login/')
     user_list = UserToList.objects.filter(user_id=1).first()
     result = ShoppingList.objects.filter(list_id=user_list.list_id).exclude(buy_date__isnull=False).all()
     if request.method == "POST":
@@ -72,3 +80,6 @@ def remove_item(request):
             item_obj.delete()
 
     return render(request, 'remove_form.html', {'shopping_list_data': result})
+
+
+
