@@ -1,0 +1,23 @@
+version: "3.9"
+services:
+
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    command: python manage.py runserver
+    environment:
+      - DB_HOST=postgres_container
+      - DB_USER=postgres
+      - DB_PASSWORD=postgres
+
+
+  db:
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - '5432:5432'
+    hostname: postgres_container

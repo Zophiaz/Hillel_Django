@@ -9,7 +9,7 @@ from .models import ShoppingList, UserToList, MallList, Item
 def index(request):
     if not request.user.is_authenticated:
         return redirect('http://127.0.0.1:8000/user/login/')
-    user_list = UserToList.objects.filter(user_id=1).first()
+    user_list = UserToList.objects.filter(user_id=request.user.id).first()
 
     #new_result = [itm.__dict__ for itm in result]
     if request.method == "POST":
@@ -31,7 +31,7 @@ def index(request):
 def add_item(request):
     if not request.user.is_authenticated:
         return redirect('http://127.0.0.1:8000/user/login/')
-    user_list = UserToList.objects.filter(user_id=1).first()
+    user_list = UserToList.objects.filter(user_id=request.user.id).first()
 
     if request.method == "POST":
         item = request.POST.get('item')
@@ -52,7 +52,7 @@ def add_item(request):
 def buy_item(request):
     if not request.user.is_authenticated:
         return redirect('http://127.0.0.1:8000/user/login/')
-    user_list = UserToList.objects.filter(user_id=1).first()
+    user_list = UserToList.objects.filter(user_id=request.user.id).first()
 
     #for raw in db_raw:
     if request.method == "POST":
@@ -71,7 +71,7 @@ def buy_item(request):
 def remove_item(request):
     if not request.user.is_authenticated:
         return redirect('http://127.0.0.1:8000/user/login/')
-    user_list = UserToList.objects.filter(user_id=1).first()
+    user_list = UserToList.objects.filter(user_id=request.user.id).first()
     result = ShoppingList.objects.filter(list_id=user_list.list_id).exclude(buy_date__isnull=False).all()
     if request.method == "POST":
         item_id = ShoppingList.item_id
