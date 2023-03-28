@@ -33,22 +33,45 @@
     <ul id="navbar">
       <li><a href="http://127.0.0.1:8000/user/">Home</a></li>
       <li><a href="/shopping_list/">My list</a></li>
-      <li><a href="/shopping_list/add">Add item</a></li>
-      <li><a href="/shopping_list/buy">Buy item</a></li>
-      <li><a href="/shopping_list/remove">Remove item</a></li>
+
     </ul>
 
 <br>
 <br>
 <br>
-<br>
-<h1>List of items:</h1>
-    {% for item in shopping_list_data %}
-        <p> {{ item.item_id.name }} {{ item.quantity }} {{item.item_id.shop_id.name}}
-            <br>
 
+<h1>Add item:</h1>
+    <form action="/shopping_list/" method="post">
+        {% csrf_token %}
+        <input type="text" name="item" placeholder="Foods">
+        <input type="text" name="amount" placeholder="Amount">
+        <select name="shop">
+            {% for shop in shops %}
+                <option value ="{{ shop.id }}">{{ shop.name }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Add">
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1>List of items</h1>
+        {%for item in shopping_list_data %}
+            <p>{{ item.item_id.name }} {{ item.quantity }}  {{item.item_id.shop_id.name}}<p>
+            <form method="post" action="/shopping_list/{{ item.item_id.id }}/buy">
+                {% csrf_token %}
+                <Label> Price:</label> <input type="number" value = "price" name="price" placeholder="1.00" >
+                <Label> Purchase date:</label> <input name="buy_date" type="date" >
+                <input type="submit" value="Buy">
+            </form>
+            <form method="post" action="/shopping_list/{{ item.item_id.id }}/remove">
+                {% csrf_token %}
+                  <p><input type="submit" value="Remove">
+            </form>
+        {% endfor %}
 
-{% endfor %}
 
 
 </body>

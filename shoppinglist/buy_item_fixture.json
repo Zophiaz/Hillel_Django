@@ -1,0 +1,566 @@
+[
+{
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": 1,
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": 1,
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": 1,
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": 1,
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+        "name": "Can add permission",
+        "content_type": 2,
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+        "name": "Can change permission",
+        "content_type": 2,
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": 2,
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+        "name": "Can view permission",
+        "content_type": 2,
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+        "name": "Can add group",
+        "content_type": 3,
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+        "name": "Can change group",
+        "content_type": 3,
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+        "name": "Can delete group",
+        "content_type": 3,
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+        "name": "Can view group",
+        "content_type": 3,
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+        "name": "Can add user",
+        "content_type": 4,
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+        "name": "Can change user",
+        "content_type": 4,
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+        "name": "Can delete user",
+        "content_type": 4,
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+        "name": "Can view user",
+        "content_type": 4,
+        "codename": "view_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+        "name": "Can add content type",
+        "content_type": 5,
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+        "name": "Can change content type",
+        "content_type": 5,
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": 5,
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+        "name": "Can view content type",
+        "content_type": 5,
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+        "name": "Can add session",
+        "content_type": 6,
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+        "name": "Can change session",
+        "content_type": 6,
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+        "name": "Can delete session",
+        "content_type": 6,
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+        "name": "Can view session",
+        "content_type": 6,
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+        "name": "Can add item",
+        "content_type": 7,
+        "codename": "add_item"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+        "name": "Can change item",
+        "content_type": 7,
+        "codename": "change_item"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+        "name": "Can delete item",
+        "content_type": 7,
+        "codename": "delete_item"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+        "name": "Can view item",
+        "content_type": 7,
+        "codename": "view_item"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+        "name": "Can add mall list",
+        "content_type": 8,
+        "codename": "add_malllist"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+        "name": "Can change mall list",
+        "content_type": 8,
+        "codename": "change_malllist"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+        "name": "Can delete mall list",
+        "content_type": 8,
+        "codename": "delete_malllist"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+        "name": "Can view mall list",
+        "content_type": 8,
+        "codename": "view_malllist"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+        "name": "Can add user to list",
+        "content_type": 9,
+        "codename": "add_usertolist"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+        "name": "Can change user to list",
+        "content_type": 9,
+        "codename": "change_usertolist"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+        "name": "Can delete user to list",
+        "content_type": 9,
+        "codename": "delete_usertolist"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+        "name": "Can view user to list",
+        "content_type": 9,
+        "codename": "view_usertolist"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+        "name": "Can add shopping list",
+        "content_type": 10,
+        "codename": "add_shoppinglist"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+        "name": "Can change shopping list",
+        "content_type": 10,
+        "codename": "change_shoppinglist"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+        "name": "Can delete shopping list",
+        "content_type": 10,
+        "codename": "delete_shoppinglist"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+        "name": "Can view shopping list",
+        "content_type": 10,
+        "codename": "view_shoppinglist"
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$u8YLQdAuKYlOcTW2r6O6xn$KOCQVc9hM9BSGGUhxP1E4IMA0pfc0kLXvqivmbyBQnc=",
+        "last_login": "2023-03-26T20:26:01.959Z",
+        "is_superuser": false,
+        "username": "user1",
+        "first_name": "",
+        "last_name": "",
+        "email": "user1@example.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-03-26T20:25:34.396Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$2aqFxYoqTOaHzDE8x3faoa$DA66yJOQDlJWnLsMUwUlqDAk7UZRnFAf0/K5zvWYE38=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "user2",
+        "first_name": "",
+        "last_name": "",
+        "email": "user2@example.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-03-26T20:25:54.209Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+        "app_label": "auth",
+        "model": "user"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+        "app_label": "slist",
+        "model": "item"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+        "app_label": "slist",
+        "model": "malllist"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+        "app_label": "slist",
+        "model": "usertolist"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+        "app_label": "slist",
+        "model": "shoppinglist"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "7e429ladppekrb9uwjaojlwxdaoy5hfr",
+    "fields": {
+        "session_data": ".eJxVjDsOwjAQBe_iGlnx-gslfc5grb1rHECOFCcV4u4QKQW0b2beS0Tc1hq3zkucSFyEEqffLWF-cNsB3bHdZpnnti5TkrsiD9rlOBM_r4f7d1Cx12_NyoScBiAyRNoGox0ilADgfEZt2TsNBbwONHjFljQod2YgwFBKSOL9AdmlN6I:1pgWwD:h30Q9wPGY_iv0otgOWbgotdfM6rATvbAAiq8oJpVGEw",
+        "expire_date": "2023-04-09T20:26:01.962Z"
+    }
+},
+{
+    "model": "slist.shoppinglist",
+    "pk": 1,
+    "fields": {
+        "list_id": "0cf78b52-42c7-4a47-b24d-8a8aacaf4f31",
+        "item_id": 1,
+        "quantity": 1,
+        "price": null,
+        "status": "available",
+        "buy_date": null
+    }
+},
+{
+    "model": "slist.shoppinglist",
+    "pk": 2,
+    "fields": {
+        "list_id": "0cf78b52-42c7-4a47-b24d-8a8aacaf4f31",
+        "item_id": 2,
+        "quantity": 2,
+        "price": null,
+        "status": "available",
+        "buy_date": null
+    }
+},
+{
+    "model": "slist.usertolist",
+    "pk": 1,
+    "fields": {
+        "user_id": 1,
+        "list_id": "0cf78b52-42c7-4a47-b24d-8a8aacaf4f31"
+    }
+},
+{
+    "model": "slist.usertolist",
+    "pk": 2,
+    "fields": {
+        "user_id": 2,
+        "list_id": "0cf78b52-42c7-4a47-b24d-8a8aacaf4f31"
+    }
+},
+{
+    "model": "slist.malllist",
+    "pk": 1,
+    "fields": {
+        "name": "ATB",
+        "list_id": "0cf78b52-42c7-4a47-b24d-8a8aacaf4f31"
+    }
+},
+{
+    "model": "slist.malllist",
+    "pk": 2,
+    "fields": {
+        "name": "Silpo",
+        "list_id": "0cf78b52-42c7-4a47-b24d-8a8aacaf4f31"
+    }
+},
+{
+    "model": "slist.malllist",
+    "pk": 3,
+    "fields": {
+        "name": "Novus",
+        "list_id": "0cf78b52-42c7-4a47-b24d-8a8aacaf4f31"
+    }
+},
+{
+    "model": "slist.item",
+    "pk": 1,
+    "fields": {
+        "name": "Cheese",
+        "shop_id": 1
+    }
+},
+{
+    "model": "slist.item",
+    "pk": 2,
+    "fields": {
+        "name": "Milk",
+        "shop_id": 3
+    }
+}
+]

@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Added</title>
+    <title>success</title>
+
 
     <style>
       #navbar {
@@ -32,28 +33,13 @@
     <ul id="navbar">
       <li><a href="http://127.0.0.1:8000/user/">Home</a></li>
       <li><a href="/shopping_list/">My list</a></li>
-      <li><a href="/shopping_list/add">Add item</a></li>
-      <li><a href="/shopping_list/<item_id>/buy">Buy item</a></li>
-      <li><a href="/shopping_list/remove">Remove item</a></li>
 
-</ul>
-<br>
+    </ul>
+
 <br>
 <br>
 <br>
 
-<h1> Add item:</h1>
-<form action="/shopping_list/add" method="post">
-    {% csrf_token %}
-    <input type="text" name="item" placeholder="Item">
-    <input type="number" name="amount" placeholder="Amount">
-    <select name="shop">
-        {% for shop in shops %}
-        <option value ="{{ shop.id }}">{{ shop.name }}</option>
-    {% endfor %}
-    </select>
-    <input type="submit" value="Add">
-
-</form>
+<h1>Successful purchase! </h1>
 </body>
 </html>

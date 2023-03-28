@@ -44,22 +44,20 @@
 
 
 <h1>Buy item by adding details about the purchase:</h1>
-<form action="/shopping_list/buy" method="post">
+<form action="/shopping_list/{{ item.item_id.id }}/buy" method="post">
     {% csrf_token %}
+
     {% for item in shopping_list_data %}
         <p> Item: {{ item.item_id.name }} <br> Amount: {{ item.quantity }} <br> Shop: {{item.item_id.shop_id.name}}<br>
     <label >Purchase date:</label>
-    <input type="date" placeholder ="buy_date"> <br>
+    <input type="date" name="buy_date"/>
 
     <label >Price:</label>
-    <input type="number" value="1.00" placeholder = "price"> <br>
-    <input type="submit">
-    <br> <br>
+    <input type="number" placeholder="1.00" name="price"/>
+    <input type="submit" value="Buy"/>
 
-{% endfor %}
-<br>
-<br>
 
+    {% endfor %}
 </form>
 
 </body>
